@@ -6,3 +6,115 @@ body {
     font-size: 18px;
     line-height: 30px;
 }
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #FAF3FF;
+    border-bottom: 2px solid #E6D6F5;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    flex-wrap: wrap;
+    
+    top: 0;
+    position: sticky;
+    z-index: 10;
+}
+ 
+.encabezado div a img {
+    width: 120px;
+    margin-top: 10px;
+}
+ 
+.encabezado nav {
+    display: flex;
+    gap: 15px;
+}
+ 
+.encabezado nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 17px;
+}
+ 
+#hamburguesa {
+    display: none;
+    font-size: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #61378d;
+}
+ 
+.encabezado nav a:hover {
+    color: #61378d;
+    font-weight: 700;
+    transform: translateY(-3px);
+}
+ 
+.Boton_Menu {
+    display: none;
+}
+ 
+@media(max-width: 1000px) {
+
+    #hamburguesa {
+        display: block;
+    }
+
+    .encabezado nav {
+        display: none;
+        flex-direction: column;
+        background: #FAF3FF;
+        width: 100%;
+        padding: 20px 0;
+        border-top: 2px solid #E6D6F5;
+        margin-top: 15px;
+    }
+
+    .encabezado nav a {
+        font-size: 20px;
+        text-align: center;
+        width: 100%;
+        transition: transform 0.3s ease;
+    }
+
+    .encabezado nav.activo {
+        display: flex;
+    }
+
+    .BotonIR {
+        display: none;
+    }
+
+    .Boton_Menu {
+        display: block;
+        width: 150px !important;
+        padding: 10px;
+        background: #61378d;
+        border: none;
+        border-radius: 12px;
+        text-decoration: none;
+        color: white !important;
+        font-size: 17px;
+        cursor: pointer;
+        margin: 0px auto;
+        text-align: center;
+    }
+}
+ 
+.BotonIR {
+    padding: 8px 14px;
+    background: #61378d;
+    border: none;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+}
+ 
+.BotonIR:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
