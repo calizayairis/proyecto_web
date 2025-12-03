@@ -19,24 +19,20 @@ body {
     top: 0;
     position: sticky;
     z-index: 10;
-}
- 
+} 
 .encabezado div a img {
     width: 120px;
     margin-top: 10px;
 }
- 
 .encabezado nav {
     display: flex;
     gap: 15px;
 }
- 
 .encabezado nav a {
     text-decoration: none;
     color: #333;
     font-size: 17px;
 }
- 
 #hamburguesa {
     display: none;
     font-size: 32px;
@@ -45,13 +41,11 @@ body {
     cursor: pointer;
     color: #61378d;
 }
- 
 .encabezado nav a:hover {
     color: #61378d;
     font-weight: 700;
     transform: translateY(-3px);
 }
- 
 .Boton_Menu {
     display: none;
 }
@@ -61,7 +55,6 @@ body {
     #hamburguesa {
         display: block;
     }
-
     .encabezado nav {
         display: none;
         flex-direction: column;
@@ -71,22 +64,18 @@ body {
         border-top: 2px solid #E6D6F5;
         margin-top: 15px;
     }
-
     .encabezado nav a {
         font-size: 20px;
         text-align: center;
         width: 100%;
         transition: transform 0.3s ease;
     }
-
     .encabezado nav.activo {
         display: flex;
     }
-
     .BotonIR {
         display: none;
     }
-
     .Boton_Menu {
         display: block;
         width: 150px !important;
@@ -102,7 +91,6 @@ body {
         text-align: center;
     }
 }
- 
 .BotonIR {
     padding: 8px 14px;
     background: #61378d;
@@ -113,12 +101,10 @@ body {
     font-size: 17px;
     cursor: pointer;
 }
- 
 .BotonIR:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease;
 }
-
 .cajaInicio {
     background: #61378d;
     color: white;
@@ -128,26 +114,62 @@ body {
     display: flex;
     align-items: center;
 }
- 
 .cajaInicio img {
     height: 100%;
     width: auto;
     margin: 0;
 }
- 
 .cajaInicio h1 {
     margin-bottom: 1.5rem;
     font-size: 65px;
     margin: 40px;
 }
- 
 .cajaInicio h2 {
     margin-bottom: 1.5rem;
     font-size: 40px;
     font-weight: 300;
     margin: 40px;
 }
- 
 .cajaInicio p {
     margin: 40px;
+}
+
+.cajaSomos {
+    background: #FAF3FF;
+    margin: 50px 0 60px;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+ 
+.cajaSomos img {
+    height: 30rem;
+    width: auto;
+    margin-left: 60px;
+}
+ 
+.textoA {
+    margin: 30px 50px;
+    width: 450px;
+    font-size: 19px;
+}
+ 
+.BotonInfo {
+    padding: 8px 14px;
+    background: #61378d;
+    border: none;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+}
+ 
+.BotonInfo:hover {
+    background-color: #61378d;
+    box-shadow: 0 4px 12px rgba(255, 80, 220, 0.3);
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
 }
