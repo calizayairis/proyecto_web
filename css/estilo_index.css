@@ -118,3 +118,36 @@ body {
     transform: scale(1.05);
     transition: transform 0.3s ease;
 }
+
+.cajaInicio {
+    background: #61378d;
+    color: white;
+    height: 30rem;
+    margin: 40px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+}
+ 
+.cajaInicio img {
+    height: 100%;
+    width: auto;
+    margin: 0;
+}
+ 
+.cajaInicio h1 {
+    margin-bottom: 1.5rem;
+    font-size: 65px;
+    margin: 40px;
+}
+ 
+.cajaInicio h2 {
+    margin-bottom: 1.5rem;
+    font-size: 40px;
+    font-weight: 300;
+    margin: 40px;
+}
+ 
+.cajaInicio p {
+    margin: 40px;
+}
