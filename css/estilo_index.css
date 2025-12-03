@@ -377,3 +377,50 @@ textarea {
     transition: 0.3s ease;
 }
  
+.footer {
+    background-color: #61378d;
+    color: white;
+    padding: 30px 50px;
+}
+
+.par {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo_M img {
+    width: 120px;
+    height: auto;
+}
+
+.par1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+}
+
+.par1 a, .par2 a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.par1 a:hover, .par2 a:hover {
+    font-weight: 600;
+}
+
+.par2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.final {
+    text-align: center;
+    font-size: 16px;
+    margin: 15px 0 -10px;
+    border-top: 1px solid rgba(127, 126, 126, 0.5);
+    padding-top: 10px;
+}
