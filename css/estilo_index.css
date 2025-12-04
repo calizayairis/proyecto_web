@@ -698,6 +698,10 @@ textarea {
         width: 100%;
     }
 }
+
+.oculto {
+    display: none;
+} 
 .cajaPaginas {
     display: flex;
     justify-content: center;
@@ -724,6 +728,4 @@ textarea {
     font-weight: bold;
     color: #61378d;
 }
-.oculto {
-    display: none;
-}
+
