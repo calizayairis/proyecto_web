@@ -698,3 +698,32 @@ textarea {
         width: 100%;
     }
 }
+.cajaPaginas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 25px 0 40px;
+}
+.cajaPaginas button {
+    background: #61378d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 17px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.cajaPaginas button:hover {
+    background: #4e2c70;
+    transform: scale(1.05);
+    transition: 0.3s ease;
+}
+#Actual {
+    font-size: 18px;
+    font-weight: bold;
+    color: #61378d;
+}
+.oculto {
+    display: none;
+}
