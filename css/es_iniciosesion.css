@@ -1,0 +1,164 @@
+
+body {
+    margin: 0;
+    font-family: Nunito, Arial, sans-serif;
+    background: #FAF3FF;
+
+    display: flex;
+    justify-content: center;
+    padding: 23px;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.cajag {
+    margin: 45px;
+    width: 96%;
+    max-width: 1000px;
+    background: #ffffff;
+    border-radius: 25px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+
+.mitad2 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.mitad2 img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+}
+
+.mitad1 {
+    flex: 1;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+    width: 160px;
+    margin-bottom: 35px;
+}
+
+.google {
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    border: 1px solid #d1d1d1;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 28px;
+    background: #fff;
+    font-weight: bold;
+    justify-content: center;
+}
+
+.google img {
+    width: 22px;
+    margin-right: 10px;
+}
+
+.google:hover {
+    background: #f7f3ff;
+    border-color: #b5a9ff;
+}
+
+.inputs {
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+.inputs input {
+    width: 100%;
+    padding: 13px 17px;
+    border-radius: 25px;
+    border: 1px solid #cfcfcf;
+    font-size: 15px;
+}
+
+.inputs input{
+    border-color: #7c6cff;
+    box-shadow: 0 0 6px rgba(124,108,255,0.3);
+}
+
+.BotonRegistro {
+    width: 105%;
+    padding: 13px;
+    background: #5a4ff3;
+    color: white;
+    font-size: 16px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+}
+
+.BotonRegistro:hover {
+    background: #4d41e0;
+}
+
+.BotonInicio {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 14px;
+}
+
+.BotonInicio a {
+    color: #5a4ff3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media (max-width: 992px) {
+
+    body {
+        padding: 25px;
+    }
+    .cajag {
+        padding: 35px;
+        gap: 25px;
+    }
+    .logo img {
+        width: 140px;
+    }
+
+    .mitad1 {
+        padding: 2rem 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .cajag {
+        flex-direction: column;
+        padding: 25px;
+        gap: 10px;
+        justify-content: center;
+    }
+    .mitad2 img {
+        width: 320px;
+    }
+    .BotonRegistro{
+        width: 115%;
+    }
+
+}
