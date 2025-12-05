@@ -21,9 +21,9 @@
             <a href="#Cita">Agenda tu cita</a>
             <a href="#Tips">Tips</a>
             <a href="#Consulta">Consultas</a>
-            <a class="Boton_Menu" href="InicioSesion.html">Iniciar Sesión</a>
+            <a class="Boton_Menu" href="InicioSesión.html">Iniciar Sesión</a>
         </nav>
-        <a class="BotonIR" href="InicioSesion.html">Iniciar Sesión</a>
+        <a class="BotonIR" href="InicioSesión.html">Iniciar Sesión</a>
     </header>
  
     <main>
@@ -44,10 +44,7 @@
             <div class="textoA">
                 <h2>Quiénes Somos</h2>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Rerum, dolor. Nobis natus consectetur esse omnis ipsum,
-                    nisi reprehenderit inventore alias voluptas temporibus
-                    reiciendis eaque veniam porro ducimus obcaecati voluptate aperiam?
+                    En Michis nos dedicamos al cuidado integral del pelaje y la higiene de tu mascota. Contamos con un equipo capacitado que garantiza baños, cortes de pelo, limpieza de uñas y cuidados especiales. Nuestro objetivo es mantener a tu mascota limpia, cómoda y saludable, brindando un servicio seguro y profesional.
                 </p>
             </div>
         </section>
@@ -57,7 +54,7 @@
             <div class="servicio">
                 <article class="serv1">
                     <img src="img/S1.jpg" alt="Baño" class="tarjetaA">
-                    <p>Baños especializados</p>
+                    <p>Baños especializados.</p>
                 </article>
                 <article class="serv1">
                     <img src="img/S2.jpg" alt="Collar" class="tarjetaA">
@@ -79,49 +76,58 @@
             <div class="textoC">
                 <h2>Agenda tu cita</h2>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Rerum, dolor. Nobis natus consectetur esse omnis ipsum,
-                    reiciendis eaque veniam porro ducimus obcaecati voluptate aperiam?
+                    Agenda tu cita en Michis y asegura el cuidado profesional de tu mascota. Servicios rápidos, seguros y adaptados a sus necesidades.
                 </p>
-                <button class="BotonInfo">Solicitar cita</button>
-                <button class="BotonInfo">Modificar cita</button>
+                <a href="cita.html" class="BotonCita">Solicitar cita</a>
             </div>
         </section>
  
         <section id="Tips">
-            <h2 class="Titulo">Blogs</h2>
-            <div class="tip">
-                <article class="tip1">
-                    <img src="img/B1.jpg" alt="Tip 1" class="tipImg">
-                    <p>Nutrición y cuidado.</p>
-                </article>
-                <article class="tip1">
-                    <img src="img/B2.jpg" alt="Tip 2" class="tipImg">
-                    <p>Aseo y cuidado personal.</p>
-                </article>
-                <article class="tip1">
-                    <img src="img/B3.jpg" alt="Tip 3" class="tipImg">
-                    <p>Actividades de ocio y juego.</p>
-                </article>
-                <article class="tip1">
-                    <img src="img/B4.jpg" alt="Tip 4" class="tipImg">
-                    <p>Actividades al aire libre</p>
-                </article>
-                <article class="tip1">
-                    <img src="img/B5.jpg" alt="Tip 5" class="tipImg">
-                    <p>Alimentación y cuidado.</p>
-                </article>
-                <article class="tip1">
-                    <img src="img/B6.jpg" alt="Tip 6" class="tipImg">
-                    <p>Cepillado de dientes.</p>
-                </article>
-            </div>
-            <div class="cajaPaginas">
-                <button id="Atras">Anterior</button>
-                <span id="Actual"></span>
-                <button id="Siguiente">Siguiente</button>
-            </div>
-        </section>
+    <h2 class="Titulo">Blogs</h2>
+    <div class="tip">
+        <a href="blogs.html" class="blog">
+            <article class="tip1">
+                <img src="img/B1.jpg" alt="Tip 1" class="tipImg">
+                <p>Nutrición y cuidado.</p>
+            </article>
+        </a>
+        <a href="blogs1.html" class="blog">
+            <article class="tip1">
+                <img src="img/B2.jpg" alt="Tip 2" class="tipImg">
+                <p>Aseo y cuidado personal.</p>
+            </article>
+        </a>
+        <a href="blogs2.html" class="blog">
+            <article class="tip1">
+                <img src="img/B3.jpg" alt="Tip 3" class="tipImg">
+                <p>Actividades de ocio y juego.</p>
+            </article>
+        </a>
+        <a href="blogs3.html" class="blog">
+            <article class="tip1">
+                <img src="img/B4.jpg" alt="Tip 4" class="tipImg">
+                <p>Actividades al aire libre</p>
+            </article>
+        </a>
+        <a href="blogs4.html" class="blog">
+            <article class="tip1">
+                <img src="img/B5.jpg" alt="Tip 5" class="tipImg">
+                <p>Alimentación y cuidado.</p>
+            </article>
+        </a>
+        <a href="blogs5.html" class="blog">
+            <article class="tip1">
+                <img src="img/B6.jpg" alt="Tip 6" class="tipImg">
+                <p>Cepillado de dientes.</p>
+            </article>
+        </a>
+    </div>
+    <div class="cajaPaginas">
+        <button id="Atras">Anterior</button>
+        <span id="Actual"></span>
+        <button id="Siguiente">Siguiente</button>
+    </div>
+</section>
  
         <section class="consultas" id="Consulta">
             <div class="part1">
@@ -130,30 +136,32 @@
             <div class="part2">
                 <h2>Consultas</h2>
                 <form id="formConsulta">
-                    <div class="formulario">
-                        <div class="g">
-                            <input type="text" placeholder="Nombres" id="campo1">
-                            <span class="mensaje"></span>
-                        </div>
-                        <div class="g">
-                            <input type="text" placeholder="Apellidos" id="campo2">
-                            <span class="mensaje"></span>
-                        </div>
-                        <div class="g2">
-                            <input type="email" placeholder="Correo electrónico" id="campo3">
-                            <span class="mensaje"></span>
-                        </div>
-                        <div class="g2">
-                            <input type="number" placeholder="Celular" id="campo4">
-                            <span class="mensaje"></span>
-                        </div>
-                        <div class="g2">
-                         <textarea placeholder="Duda/consulta" id="campo5"></textarea>
-                            <span class="mensaje"></span>
-                        </div>
-                    </div>
-                    <button type="submit" class="BotonInfo1">Enviar</button>
-                </form>
+    <div class="formulario">
+        <div class="g">
+            <input type="text" placeholder="Nombres" id="campo1">
+            <span class="mensaje"></span>
+        </div>
+        <div class="g">
+            <input type="text" placeholder="Apellidos" id="campo2">
+            <span class="mensaje"></span>
+        </div>
+        <div class="g2">
+            <input type="email" placeholder="Correo electrónico" id="campo3">
+            <span class="mensaje"></span>
+        </div>
+        <div class="g2">
+            <input type="number" placeholder="Celular" id="campo4">
+            <span class="mensaje"></span>
+        </div>
+        <div class="g2">
+            <textarea placeholder="Duda/consulta" id="campo5"></textarea>
+            <span class="mensaje"></span>
+        </div>
+    </div>
+    <button type="submit" class="BotonInfo1">Enviar</button>
+    <p class="mensaje-exito"></p>
+</form>
+
             </div>
         </section>
  
@@ -164,21 +172,31 @@
     </main>
  
     <footer class="footer">
-        <div class="par">
-            <div class="logo_M">
-                <img src="img/Logo_P.png" alt="Michis Logo">
-            </div>
-            <div class="par1">
-                <a href="#inicio">Inicio</a>
-                <a href="#Servicios">Servicios</a>
-                <a href="#Consulta">Consultas</a>
-                <a href="#Tips">Tips</a>
-                <a href="#Cita">Cita</a>
-                <a href="#Tips">Tips</a>
-            </div>
+    <div class="par">
+        <div class="logo_M">
+            <img src="img/Logo_P.png" alt="Michis Logo">
         </div>
-        <p class="final">© 2025</p>
-    </footer>
+        <div class="par1">
+            <a href="#inicio">Inicio</a>
+            <a href="#Servicios">Servicios</a>
+            <a href="#Consulta">Consultas</a>
+            <a href="#Tips">Tips</a>
+            <a href="#Cita">Cita</a>
+        </div>
+        <div class="par2">
+            <div class="redes">
+                <a href="#" class="red1"><img src="img/facebook.svg" alt=""></a>
+                <a href="#" class="red1"><img src="img/instagram.svg" alt=""></a>
+                <a href="#" class="red1"><img src="img/linkedin.svg" alt=""></a>
+            </div>
+            <div class="contacto">
+                <p>Iris Calizaya</p>
+                <p>Teléfono: +591 69777339</p>
+        </div>
+    </div>
+    <p class="final">© 2025 Michis. Todos los derechos reservados.</p>
+</footer>
+
     
     <script src="js/script.js"></script>
 </body>
