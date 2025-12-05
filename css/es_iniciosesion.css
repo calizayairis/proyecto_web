@@ -1,9 +1,7 @@
-
 body {
     margin: 0;
     font-family: Nunito, Arial, sans-serif;
     background: #FAF3FF;
-
     display: flex;
     justify-content: center;
     padding: 23px;
@@ -161,4 +159,23 @@ main {
         width: 115%;
     }
 
+}
+
+.mensaje {
+    color: #e63946;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.mensajeE {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+    color: #4CAF50;
+    display: none;
+}
+
+.mensajeE.mostrar {
+    display: block;
+    cursor: pointer;
 }

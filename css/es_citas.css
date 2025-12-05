@@ -27,7 +27,6 @@ main {
 }
 
 .mitad2 {
-    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,7 +39,6 @@ main {
 }
 
 .mitad1 {
-    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -62,7 +60,7 @@ form {
     width: 100%;
 }
 
-.fila-doble {
+.filadoble {
     display: flex;
     gap: 15px;
     margin-bottom: 18px;
@@ -87,24 +85,26 @@ form {
 .campo input:focus,
 .campo select:focus {
     outline: none;
-    border-color: #5a4ff3;
+    border-color: #61378d;
     box-shadow: 0 0 6px rgba(124,108,255,0.3);
 }
 
 .BotonRegistro {
     width: 100%;
     padding: 13px;
-    background: #5a4ff3;
+    background: #61378d;
     color: white;
     font-size: 16px;
     border-radius: 25px;
     border: none;
     cursor: pointer;
     margin-top: 12px;
+    transition: transform 0.3s ease;
 }
 
 .BotonRegistro:hover {
-    background: #4d41e0;
+    transform: scale(1.06);
+    box-shadow: 0 4px 12px rgba(255, 80, 220, 0.3);
 }
 
 .mensaje {
@@ -126,7 +126,6 @@ form {
     display: block;
 }
 
-/* Responsividad */
 @media (max-width: 992px) {
     .cajag {
         flex-direction: column;

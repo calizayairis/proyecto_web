@@ -196,6 +196,27 @@ body {
     transform: scale(1.05);
     transition: transform 0.3s ease;
 }
+
+.BotonCita {
+    display: block;
+    width: 160px;
+    padding: 12px 20px;
+    background: #61378d;
+    color: white;
+    font-size: 17px;
+    border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.BotonCita:hover {
+    transform: scale(1.06);
+    box-shadow: 0 4px 12px rgba(255, 80, 220, 0.3);
+}
+
+
  
 /*  */
 .Titulo {

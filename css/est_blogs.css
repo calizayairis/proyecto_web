@@ -138,14 +138,8 @@ body {
  
 .cajaInicio h1 {
     margin-bottom: 1.5rem;
-    font-size: 65px;
-    margin: 40px;
-}
-
-.cajaInicio h2 {
-    margin-bottom: 1.5rem;
-    font-size: 40px;
-    font-weight: 300;
+    font-size: 45px;
+    line-height: 1.5;
     margin: 40px;
 }
 .cajaInicio p {

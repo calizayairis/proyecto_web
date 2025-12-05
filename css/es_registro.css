@@ -2,41 +2,63 @@ body {
     margin: 0;
     font-family: Nunito, Arial, sans-serif;
     background: #FAF3FF;
+
     display: flex;
     justify-content: center;
-    padding: 30px;
+    padding: 23px;
 }
-
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 .cajag {
-    width: 85%;
+    margin: 20px;
+    width: 96%;
+    max-width: 1000px;
     background: #ffffff;
     border-radius: 25px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+
     display: flex;
     gap: 35px;
-    padding: 45px;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+    align-items: center;
+}
+
+
+.mitad2 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.mitad2 img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
 }
 
 .mitad1 {
     flex: 1;
-    padding: 5rem;
+    padding: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.mitad1 div {
+.logo {
+    width: 100%;
     display: flex;
     justify-content: center;
-}
-
-.logo img {
-    width: 200px;
     margin-bottom: 25px;
 }
 
+.logo img {
+    width: 180px;
+}
+
 .google {
-    width: 93%;
+    width: 100%;
     padding: 12px;
     border-radius: 25px;
     border: 1px solid #d1d1d1;
@@ -46,6 +68,7 @@ body {
     margin-bottom: 28px;
     background: white;
     font-weight: bold;
+    justify-content: center;
 }
 
 .google:hover {
@@ -57,6 +80,7 @@ body {
     width: 22px;
     margin-right: 10px;
 }
+
 .inputs {
     width: 100%;
     margin-bottom: 18px;
@@ -90,7 +114,7 @@ body {
 
 .BotonInicio {
     text-align: center;
-    margin-top: 18px;
+    margin-top: 20px;
     font-size: 14px;
 }
 
@@ -99,46 +123,58 @@ body {
     text-decoration: none;
     font-weight: bold;
 }
-.mitad2 {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-.mitad2 img {
-    width: 100%;
-    height: auto;
-}
 @media (max-width: 992px) {
 
     body {
-        padding: 35px;
+        padding: 25px;
     }
     .cajag {
         padding: 35px;
-        height: auto;
         gap: 25px;
-    }
-    .mitad1 {
-        padding: 2rem;
     }
     .logo img {
         width: 140px;
+    }
+
+    .mitad1 {
+        padding: 2rem 1rem;
     }
 }
 
 @media (max-width: 600px) {
     .cajag {
         flex-direction: column;
-        width: 100%;
         padding: 25px;
-        gap: 15px;
-        height: auto;
-    }
-    .logo {
-        width: 100%;
+        gap: 10px;
         justify-content: center;
-        margin-bottom: 15px;
     }
+    .mitad2 img {
+        width: 320px;
+    }
+    .BotonRegistro{
+        width: 115%;
+    }
+
+}
+
+.mensaje {
+    color: #90212a;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.mensajeE {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+    color: #1fa71f;
+    padding: 10px;
+    border-radius: 12px;
+    display: none;
+}
+
+.mensajeE.mostrar {
+    display: block;
+    cursor: pointer;
 }
