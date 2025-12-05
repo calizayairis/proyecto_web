@@ -4,11 +4,11 @@ Hambur.addEventListener("click", () => {
     Menu.classList.toggle("activo");
 });
  
+/* Paginador */
 let tarjetas = document.querySelectorAll(".tip1");
-
-let btnAtras = document.getElementById("Atras");
-let btnSiguiente = document.getElementById("Siguiente");
-let pagActual = document.getElementById("Actual");
+let Atras = document.getElementById("Atras");
+let Siguiente = document.getElementById("Siguiente");
+let Actual = document.getElementById("Actual");
 
 let pag = 1;
 let porPag = 3;
@@ -26,21 +26,19 @@ function contarPorPantalla() {
     let t = tarjetas.length;
     total = parseInt(t / porPag);
     if (t % porPag !== 0) {
-        total = total + 1;
+        total += 1;
     }
 }
 
 function mostrar() {
     contarPorPantalla();
 
-    // Ocultar todos
     let i = 0;
     while (i < tarjetas.length) {
         tarjetas[i].classList.add("oculto");
         i++;
     }
 
-    // Mostrar solo los de la página actual
     let inicio = (pag - 1) * porPag;
     let fin = inicio + porPag;
 
@@ -50,17 +48,17 @@ function mostrar() {
         j++;
     }
 
-    pagActual.textContent = "Página " + pag + " de " + total;
+    Actual.textContent = "Página " + pag + " de " + total;
 }
 
-btnSiguiente.onclick = function () {
+Siguiente.onclick = function () {
     if (pag < total) {
         pag++;
         mostrar();
     }
 };
 
-btnAtras.onclick = function () {
+Atras.onclick = function () {
     if (pag > 1) {
         pag--;
         mostrar();
@@ -75,5 +73,52 @@ window.addEventListener("resize", function () {
         mostrar();
     }
 });
-
 mostrar();
+
+/* formulario */
+var form = document.getElementById('formConsulta');
+var mensajeExito = document.querySelector('.mensaje-exito');
+
+form.onsubmit = function(e) {
+    e.preventDefault();
+
+    mensajeExito.classList.remove('mostrar');
+    mensajeExito.textContent = '';
+    
+    var campos = form.querySelectorAll('input, textarea');
+    campos.forEach(function(campo) {
+        campo.parentElement.querySelector('.mensaje').textContent = '';
+    });
+
+    var correcto = true;
+
+    if (form.campo1.value.trim() === '') {
+        form.campo1.parentElement.querySelector('.mensaje').textContent = 'Nombres es obligatorio.';
+        correcto = false;
+    }
+
+    if (form.campo2.value.trim() === '') {
+        form.campo2.parentElement.querySelector('.mensaje').textContent = 'Apellidos es obligatorio.';
+        correcto = false;
+    }
+    var email = form.campo3.value.trim();
+    if (email === '' || email.indexOf('@') === -1 || email.indexOf('.') === -1) {
+        form.campo3.parentElement.querySelector('.mensaje').textContent = 'Correo no válido.';
+        correcto = false;
+    }
+    var celular = form.campo4.value.trim();
+    if (celular === '' || isNaN(celular) || celular.length < 7) {
+        form.campo4.parentElement.querySelector('.mensaje').textContent = 'Número de celular no válido.';
+        correcto = false;
+    }
+    if (form.campo5.value.trim() === '') {
+        form.campo5.parentElement.querySelector('.mensaje').textContent = 'Consulta es obligatoria.';
+        correcto = false;
+    }
+
+    if (correcto) {
+        mensajeExito.textContent = '¡Consulta enviada correctamente!';
+        mensajeExito.classList.add('mostrar');
+        form.reset();
+    }
+};
