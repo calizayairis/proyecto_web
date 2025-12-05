@@ -1,15 +1,15 @@
 var form = document.getElementById('formLogin');
-var mensajeExito = document.querySelector('.mensajeE');
+var mensajeE = document.querySelector('.mensajeE');
+var google = document.querySelector('.google');
 
 form.onsubmit = function(e) {
     e.preventDefault();
 
-    mensajeExito.classList.remove('mostrar');
-    mensajeExito.textContent = '';
+    mensajeE.classList.remove('mostrar');
+    mensajeE.textContent = '';
 
-    var campos = form.querySelectorAll('input');
-    campos.forEach(function(campo) {
-        campo.parentElement.querySelector('.mensaje').textContent = '';
+    form.querySelectorAll('.mensaje').forEach(function(m) {
+        m.textContent = '';
     });
 
     var correcto = true;
@@ -28,12 +28,14 @@ form.onsubmit = function(e) {
     }
 
     if (correcto) {
-        form.submit();
-        alert("Inicio de Sesión exitoso.");
+        mensajeE.textContent = '¡Inicio de sesión exitoso!';
+        mensajeE.classList.add('mostrar');
     }
 };
 
-var google = document.querySelector('.google');
+mensajeE.onclick = function() {
+    window.location.href = 'index.html';
+};
 
 google.onclick = function() {
     alert("La opción de Google estará disponible pronto.");
