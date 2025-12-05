@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Cita - Michis</title>
+    <link rel="stylesheet" href="css/es_citas.css">
+    <link rel="icon" href="img/Logo_P.png">
+</head>
+<body>
+    <main>
+        <div class="cajag">
+            <div class="mitad2">
+                <img src="img/Gatito_Registro.png" alt="Mascota feliz">
+            </div>
+
+            <div class="mitad1">
+                <div class="logo">
+                    <a href="index.html"><img src="img/Logo_Michis.png" alt="Logo Michis"></a>
+                </div>
+
+                <form id="formCita">
+
+                    <div class="fila-doble">
+                        <div class="campo">
+                            <input type="text" name="nombre" placeholder="Nombre">
+                            <span class="mensaje"></span>
+                        </div>
+                        <div class="campo">
+                            <input type="text" name="apellido" placeholder="Apellido">
+                            <span class="mensaje"></span>
+                        </div>
+                    </div>
+
+                    <div class="fila-doble">
+                        <div class="campo">
+                            <input type="text" name="mascota" placeholder="Nombre de tu mascota">
+                            <span class="mensaje"></span>
+                        </div>
+                        <div class="campo">
+                            <input type="tel" name="celular" placeholder="Número de celular">
+                            <span class="mensaje"></span>
+                        </div>
+                    </div>
+
+                    <div class="campo">
+                        <input type="email" name="correo" placeholder="Correo electrónico">
+                        <span class="mensaje"></span>
+                    </div>
+
+                    <div class="campo">
+                        <select name="servicio">
+                            <option value="">Selecciona un servicio</option>
+                            <option value="baño">Baño especializado</option>
+                            <option value="corte">Corte de pelo</option>
+                            <option value="uñas">Corte y limado de uñas</option>
+                            <option value="dental">Higiene dental</option>
+                        </select>
+                        <span class="mensaje"></span>
+                    </div>
+
+                    <div class="fila-doble">
+                        <div class="campo">
+                            <input type="date" name="fecha">
+                            <span class="mensaje"></span>
+                        </div>
+                        <div class="campo">
+                            <input type="time" name="hora">
+                            <span class="mensaje"></span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="BotonRegistro">Agendar Cita</button>
+                    <p class="mensajeE">¡Cita agendada correctamente!</p>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/agendar_cita.js"></script>
+</body>
+</html>
