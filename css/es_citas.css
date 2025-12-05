@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    font-family: Nunito, Arial, sans-serif;
+    background: #FAF3FF;
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.cajag {
+    width: 100%;
+    max-width: 1000px;
+    background: #fff;
+    border-radius: 25px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+    display: flex;
+    gap: 35px;
+    align-items: center;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.mitad2 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mitad2 img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+.mitad1 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.logo img {
+    width: 160px;
+}
+
+form {
+    width: 100%;
+}
+
+.fila-doble {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.campo input,
+.campo select {
+    width: 100%;
+    padding: 13px 17px;
+    border-radius: 25px;
+    border: 1px solid #cfcfcf;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.campo input:focus,
+.campo select:focus {
+    outline: none;
+    border-color: #5a4ff3;
+    box-shadow: 0 0 6px rgba(124,108,255,0.3);
+}
+
+.BotonRegistro {
+    width: 100%;
+    padding: 13px;
+    background: #5a4ff3;
+    color: white;
+    font-size: 16px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    margin-top: 12px;
+}
+
+.BotonRegistro:hover {
+    background: #4d41e0;
+}
+
+.mensaje {
+    color: #e63946;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.mensajeE {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+    color: #4CAF50;
+    display: none;
+    cursor: pointer;
+}
+
+.mensajeE.mostrar {
+    display: block;
+}
+
+/* Responsividad */
+@media (max-width: 992px) {
+    .cajag {
+        flex-direction: column;
+        padding: 30px;
+        gap: 25px;
+    }
+}
+
+@media (max-width: 600px) {
+    .fila-doble {
+        flex-direction: column;
+    }
+}
