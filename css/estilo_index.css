@@ -342,17 +342,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px;
-    margin: 35px 0px 45px;
+    gap: 10px;
+    margin: 35px 5% 45px;
+    flex-wrap: wrap;
 }
 .cajaPaginas button {
     background: #61378d;
     color: white;
     border: none;
-    padding: 10px;
+    padding: 10px 20px;
     border-radius: 12px;
-    font-size: 13px;
+    font-size: clamp(14px, 2vw, 16px);
     cursor: pointer;
+    min-width: 80px;
 }
 .cajaPaginas button:hover {
     background: #4e2c70;
@@ -360,9 +362,10 @@ body {
     transition: 0.3s ease;
 }
 #Actual {
-    font-size: 18px;
+    font-size: clamp(14px, 2.5vw, 18px);
     font-weight: bold;
     color: #61378d;
+    padding: 0 10px;
 }
 @media (max-width: 1000px) {
     .tip {
@@ -372,12 +375,18 @@ body {
 
 @media (max-width: 650px) {
     .tip {
-        grid-template-columns: repeat(1, 1fr);
-        
+        grid-template-columns: 1fr;
         justify-content: center;
+        margin: 10px 5%;
     }
     .tip1 {
-        width: 95%;
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    .cajaPaginas {
+        gap: 8px;
+        margin: 25px 5% 35px;
     }
 }
  
@@ -412,11 +421,12 @@ body {
 }
  
 input, textarea {
-    padding: 8px 12px;
+    padding: 10px 14px;
     border-radius: 18px;
     border: 1px solid #a88ddd;
     background: #faf4ff;
-    font-size: 16px;
+    font-size: clamp(14px, 1.5vw, 16px);
+    width: 100%;
 }
  
 textarea {
@@ -680,13 +690,14 @@ textarea {
     }
 
     .formulario {
-        display: grid;
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         gap: 15px;
     }
 
     .g, .g2 {
         width: 100%;
+        grid-column: auto;
     }
 
     input, textarea {
@@ -695,6 +706,12 @@ textarea {
 
     .BotonInfo1 {
         width: 100%;
+    }
+    
+    .cajaPaginas button {
+        padding: 8px 15px;
+        font-size: 14px;
+        min-width: 70px;
     }
 }
 
@@ -774,7 +791,32 @@ html {
     }
     
     .tip {
-        margin: 5px;
+        margin: 10px 3%;
+    }
+    
+    .cajaPaginas {
+        gap: 5px;
+        margin: 20px 3% 30px;
+    }
+    
+    .cajaPaginas button {
+        padding: 8px 12px;
+        font-size: 13px;
+        min-width: 60px;
+    }
+    
+    #Actual {
+        font-size: 13px;
+        padding: 0 5px;
+    }
+    
+    .formulario {
+        gap: 12px;
+    }
+    
+    input, textarea {
+        font-size: 14px;
+        padding: 8px 10px;
     }
     
     .footer {
