@@ -28,15 +28,16 @@ body {
  
 .encabezado nav {
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
  
 .encabezado nav a {
     text-decoration: none;
     color: #333;
     font-size: 17px;
+    padding: 8px 12px;
 }
- 
+
 #hamburguesa {
     display: none;
     font-size: 32px;
@@ -56,7 +57,7 @@ body {
     display: none;
 }
  
-@media(max-width: 1000px) {
+@media(max-width: 1100px) {
 
     #hamburguesa {
         display: block;
@@ -76,6 +77,7 @@ body {
         font-size: 20px;
         text-align: center;
         width: 100%;
+        padding: 0;
         transition: transform 0.3s ease;
     }
 
@@ -90,7 +92,7 @@ body {
     .Boton_Menu {
         display: block;
         width: 150px !important;
-        padding: 10px;
+        padding: 10px 0;
         background: #ec680c;
         border: none;
         border-radius: 12px;
@@ -98,13 +100,13 @@ body {
         color: white !important;
         font-size: 17px;
         cursor: pointer;
-        margin: 0px auto;
+        margin: 15px auto 0;
         text-align: center;
     }
 }
 
 .BotonIR {
-    padding: 8px 14px;
+    padding: 10px 18px;
     background: #61378d;
     border: none;
     border-radius: 12px;
@@ -112,6 +114,7 @@ body {
     color: white;
     font-size: 17px;
     cursor: pointer;
+    margin: 0;
 }
 
 .BotonIR:hover {
@@ -124,10 +127,12 @@ body {
     background: #ec680c;
     color: white;
     height: 22rem;
-    margin: 30px;
+    margin: 30px 40px 0;
     border-radius: 25px;
     display: flex;
     align-items: center;
+    padding: 20px 20px 0;
+    gap: 20px;
 }
  
 .cajaInicio img {
@@ -137,17 +142,17 @@ body {
 }
  
 .cajaInicio h1 {
-    margin-bottom: 1.5rem;
+    margin: 0 40px 20px;
     font-size: 45px;
     line-height: 1.5;
-    margin: 40px;
 }
 .cajaInicio p {
-    margin: 40px;
+    margin: 0 40px 20px;
 }
+
 .cajaInferior {
     display: flex;
-    gap: 20px;
+    gap: 25px;
     margin: 40px;
 }
 
@@ -165,10 +170,12 @@ body {
     text-align: justify;
 }
 
-.frase{
-    background-color:rgb(233, 200, 247) ;
+.frase {
+    background-color: rgb(233, 200, 247);
     text-align: center;
-    padding: 10px 130px;
+    padding: 15px 130px;
+    margin: 25px 0;
+    border-radius: 15px;
 }
 
 @media (max-width: 1024px) {
@@ -181,18 +188,18 @@ body {
         padding: 20px;
     }
     .frase {
-        padding: 10px 80px;
+        padding: 15px 80px;
     }
 }
 
 @media (max-width: 708px) {
     .cajaInferior {
         flex-direction: column;
-        margin: 20px;
+        margin: 20px 15px;
     }
     .lateral, .nlateral {
-        width: 98%;
-        padding: 10px;
+        width: 95%;
+        padding: 12px;
     }
     .frase {
         padding: 10px 10px;
@@ -202,50 +209,62 @@ body {
 
 /* F */
 .footer {
+    display: flex;
+    flex-direction: column;
     background-color: #61378d;
     color: white;
     padding: 40px 50px;
 }
+
 .par {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     gap: 25px;
+    margin-bottom: 20px;
 }
+
 .logo_M img {
     width: 120px;
 }
+
 .par1 {
     display: flex;
     flex-direction: column;
     gap: 8px;
     text-align: center;
 }
+
 .par1 a {
     color: white;
     text-decoration: none;
     font-size: 17px;
     transition: 0.3s ease;
 }
+
 .par1 a:hover {
-    transform: translatey(3px);
+    transform: translateY(3px);
     font-weight: 600;
 }
+
 .par2 {
     display: flex;
     flex-direction: column;
     gap: 12px;
     text-align: center;
 }
-.contacto{
+
+.contacto {
     font-size: 16px;
     margin: 0;
 }
+
 .redes {
     display: flex;
     gap: 12px;
     justify-content: center;
 }
+
 .red1 {
     background: rgb(245,245,245);
     width: 40px;
@@ -255,40 +274,46 @@ body {
     border-radius: 50%;
     transition: 0.3s ease;
 }
+
 .red1 img {
     width: 22px;
     height: 22px;
 }
+
 .red1:hover {
     transform: scale(1.1);
     background: white;
 }
+
 .final {
-    text-align: center ;
-    justify-content: center;
+    width: 100%;
+    text-align: center;
     font-size: 16px;
-    margin: 15px 10px;
+    margin: 25px auto 0;
     border-top: 1px solid rgba(127, 126, 126, 0.5);
-    padding-top: 10px;
-}   
+    padding-top: 12px;
+}
 
 @media(max-width: 850px) {
+    .footer {
+        padding: 30px 20px;
+    }
+
     .par {
         grid-template-columns: 1fr;
         text-align: center;
+        gap: 30px;
     }
 }
-
-@media (max-width: 1100px) and (min-width: 655px) {
+@media (max-width: 1200px) and (min-width: 750px) {
 
     .cajaInicio {
         height: 18rem;
-        padding: 0;
     }
     .cajaInicio h1 {
         margin: 0 25px 6px;
         line-height: 1.2;
-        font-size: 55px;
+        font-size: 35px;
     }
     .cajaInicio h2 {
         margin: 0 25px 8px;
@@ -301,11 +326,12 @@ body {
         line-height: 1.3;
     }
     .cajaInicio img {
-        height: 18rem;
-        width: 80%;
+        height: 100%;
+        width: 29rem;
     }
 }
-@media (max-width: 790px) {
+
+@media (max-width: 850px) {
     .cajaInicio {
         flex-direction: column;
         text-align: center;
