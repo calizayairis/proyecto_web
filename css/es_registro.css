@@ -1,27 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Nunito, Arial, sans-serif;
     background: #FAF3FF;
-
     display: flex;
     justify-content: center;
-    padding: 23px;
+    padding: clamp(15px, 5vw, 23px);
 }
+
 main {
     width: 100%;
     display: flex;
     justify-content: center;
 }
+
 .cajag {
-    margin: 20px;
+    margin: clamp(15px, 3vw, 20px);
     width: 96%;
     max-width: 1000px;
     background: #ffffff;
     border-radius: 25px;
     box-shadow: 0 12px 30px rgba(0,0,0,0.10);
-
     display: flex;
-    gap: 35px;
+    gap: clamp(20px, 4vw, 35px);
     align-items: center;
 }
 
@@ -36,11 +40,12 @@ main {
     width: 100%;
     max-width: 420px;
     height: auto;
+    object-fit: cover;
 }
 
 .mitad1 {
     flex: 1;
-    padding: 3rem;
+    padding: clamp(1.5rem, 3vw, 3rem);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -54,12 +59,12 @@ main {
 }
 
 .logo img {
-    width: 180px;
+    width: clamp(120px, 15vw, 180px);
 }
 
 .google {
     width: 100%;
-    padding: 12px;
+    padding: clamp(10px, 2vw, 12px);
     border-radius: 25px;
     border: 1px solid #d1d1d1;
     display: flex;
@@ -69,6 +74,8 @@ main {
     background: white;
     font-weight: bold;
     justify-content: center;
+    font-size: clamp(14px, 1.5vw, 15px);
+    transition: 0.3s ease;
 }
 
 .google:hover {
@@ -77,7 +84,7 @@ main {
 }
 
 .google img {
-    width: 22px;
+    width: clamp(18px, 2.5vw, 22px);
     margin-right: 10px;
 }
 
@@ -88,28 +95,29 @@ main {
 
 .inputs input {
     width: 100%;
-    padding: 13px 17px;
+    padding: clamp(10px, 2vw, 13px) clamp(12px, 2vw, 17px);
     border-radius: 25px;
     border: 1px solid #cfcfcf;
-    font-size: 15px;
-    transition: 0.2s;
+    font-size: clamp(14px, 1.5vw, 15px);
+    transition: 0.3s ease;
 }
 
 .BotonRegistro {
     width: 100%;
-    padding: 13px;
+    padding: clamp(10px, 2vw, 13px);
     background: #ec680c;
     color: white;
-    font-size: 16px;
+    font-size: clamp(14px, 1.5vw, 16px);
     border-radius: 25px;
     border: none;
     cursor: pointer;
     margin-top: 12px;
-    transition: 0.2s;
+    transition: 0.3s ease;
 }
 
 .BotonRegistro:hover {
     background: #fa9421;
+    transform: scale(1.02);
 }
 
 .BotonInicio {
@@ -125,37 +133,47 @@ main {
 }
 
 @media (max-width: 992px) {
-
     body {
-        padding: 25px;
+        padding: 20px;
     }
     .cajag {
-        padding: 35px;
+        flex-direction: column;
+        padding: clamp(20px, 3vw, 35px);
         gap: 25px;
     }
-    .logo img {
-        width: 140px;
-    }
-
-    .mitad1 {
-        padding: 2rem 1rem;
+    .mitad1, .mitad2 {
+        flex: 0 0 100%;
     }
 }
 
 @media (max-width: 600px) {
     .cajag {
         flex-direction: column;
-        padding: 25px;
-        gap: 10px;
+        padding: 20px;
+        gap: 15px;
         justify-content: center;
     }
     .mitad2 img {
-        width: 320px;
+        width: 100%;
+        max-width: 300px;
     }
-    .BotonRegistro{
-        width: 115%;
+    .BotonRegistro {
+        width: 100%;
     }
+    
+    body {
+        padding: 15px;
+    }
+}
 
+@media (max-width: 360px) {
+    .logo img {
+        width: 100px;
+    }
+    
+    .mitad2 img {
+        max-width: 250px;
+    }
 }
 
 .mensaje {

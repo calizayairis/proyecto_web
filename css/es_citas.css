@@ -1,10 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Nunito, Arial, sans-serif;
     background: #FAF3FF;
     display: flex;
     justify-content: center;
-    padding: 25px;
+    padding: clamp(15px, 5vw, 25px);
 }
 
 main {
@@ -20,30 +24,31 @@ main {
     border-radius: 25px;
     box-shadow: 0 12px 30px rgba(0,0,0,0.10);
     display: flex;
-    gap: 35px;
+    gap: clamp(20px, 4vw, 35px);
     align-items: center;
-    padding: 40px;
-    box-sizing: border-box;
+    padding: clamp(20px, 4vw, 40px);
 }
 
 .mitad2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex: 1;
 }
 
 .mitad2 img {
     width: 100%;
     max-width: 400px;
     height: auto;
+    object-fit: cover;
 }
 
 .mitad1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 2rem;
-    box-sizing: border-box;
+    padding: clamp(1rem, 3vw, 2rem);
+    flex: 1;
 }
 
 .logo {
@@ -53,7 +58,7 @@ main {
 }
 
 .logo img {
-    width: 160px;
+    width: clamp(120px, 15vw, 160px);
 }
 
 form {
@@ -64,22 +69,23 @@ form {
     display: flex;
     gap: 15px;
     margin-bottom: 18px;
+    flex-wrap: wrap;
 }
 
 .campo {
     display: flex;
     flex-direction: column;
     flex: 1;
+    min-width: 200px;
 }
 
 .campo input,
 .campo select {
     width: 100%;
-    padding: 13px 17px;
+    padding: clamp(10px, 2vw, 13px) clamp(12px, 2vw, 17px);
     border-radius: 25px;
     border: 1px solid #cfcfcf;
-    font-size: 15px;
-    box-sizing: border-box;
+    font-size: clamp(14px, 1.5vw, 15px);
 }
 
 .campo input:focus,
@@ -91,19 +97,19 @@ form {
 
 .BotonRegistro {
     width: 100%;
-    padding: 13px;
+    padding: clamp(10px, 2vw, 13px);
     background: #61378d;
     color: white;
-    font-size: 16px;
+    font-size: clamp(14px, 1.5vw, 16px);
     border-radius: 25px;
     border: none;
     cursor: pointer;
     margin-top: 12px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .BotonRegistro:hover {
-    transform: scale(1.06);
+    transform: scale(1.05);
     box-shadow: 0 4px 12px rgba(255, 80, 220, 0.3);
 }
 
@@ -129,13 +135,40 @@ form {
 @media (max-width: 992px) {
     .cajag {
         flex-direction: column;
-        padding: 30px;
+        padding: clamp(20px, 4vw, 30px);
         gap: 25px;
+    }
+    
+    .mitad1, .mitad2 {
+        flex: 0 0 100%;
     }
 }
 
 @media (max-width: 600px) {
-    .fila-doble {
+    .filadoble {
         flex-direction: column;
+        gap: 12px;
+    }
+    
+    .campo {
+        min-width: 100%;
+    }
+    
+    body {
+        padding: 15px;
+    }
+    
+    main {
+        width: 100%;
+    }
+}
+
+@media (max-width: 360px) {
+    .logo img {
+        width: 100px;
+    }
+    
+    .mitad2 img {
+        max-width: 280px;
     }
 }
