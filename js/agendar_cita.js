@@ -55,7 +55,7 @@ form.onsubmit = function(e) {
     if (correcto) {
         mensajeExito.textContent = '¡Cita agendada correctamente!';
         mensajeExito.classList.add('mostrar');
-
+        
         mensajeExito.onclick = function() {
             window.location.href = "index.html";
         };
