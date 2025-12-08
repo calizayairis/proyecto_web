@@ -8,7 +8,9 @@ body {
     background: #FAF3FF;
     display: flex;
     justify-content: center;
-    padding: clamp(15px, 5vw, 25px);
+    padding: 25px;
+    color: #333;
+    line-height: 1.5;
 }
 
 main {
@@ -24,31 +26,29 @@ main {
     border-radius: 25px;
     box-shadow: 0 12px 30px rgba(0,0,0,0.10);
     display: flex;
-    gap: clamp(20px, 4vw, 35px);
+    gap: clamp(20px, 4vw, 40px);
     align-items: center;
-    padding: clamp(20px, 4vw, 40px);
+    padding: clamp(24px, 4vw, 40px);
 }
 
 .mitad2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 1;
 }
 
 .mitad2 img {
     width: 100%;
-    max-width: 400px;
+    max-width: 420px;
     height: auto;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .mitad1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: clamp(1rem, 3vw, 2rem);
-    flex: 1;
+    padding: 2rem;
 }
 
 .logo {
@@ -58,7 +58,7 @@ main {
 }
 
 .logo img {
-    width: clamp(120px, 15vw, 160px);
+    width: clamp(120px, 16vw, 160px);
 }
 
 form {
@@ -76,16 +76,15 @@ form {
     display: flex;
     flex-direction: column;
     flex: 1;
-    min-width: 200px;
 }
 
 .campo input,
 .campo select {
     width: 100%;
-    padding: clamp(10px, 2vw, 13px) clamp(12px, 2vw, 17px);
+    padding: 13px 17px;
     border-radius: 25px;
     border: 1px solid #cfcfcf;
-    font-size: clamp(14px, 1.5vw, 15px);
+    font-size: clamp(14px, 1.6vw, 16px);
 }
 
 .campo input:focus,
@@ -97,19 +96,19 @@ form {
 
 .BotonRegistro {
     width: 100%;
-    padding: clamp(10px, 2vw, 13px);
+    padding: 13px;
     background: #61378d;
     color: white;
-    font-size: clamp(14px, 1.5vw, 16px);
+    font-size: clamp(15px, 1.6vw, 17px);
     border-radius: 25px;
     border: none;
     cursor: pointer;
     margin-top: 12px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .BotonRegistro:hover {
-    transform: scale(1.05);
+    transform: scale(1.06);
     box-shadow: 0 4px 12px rgba(255, 80, 220, 0.3);
 }
 
@@ -132,43 +131,81 @@ form {
     display: block;
 }
 
-@media (max-width: 992px) {
-    .cajag {
-        flex-direction: column;
-        padding: clamp(20px, 4vw, 30px);
-        gap: 25px;
+@media (max-width: 1100px) {
+    body {
+        padding: 20px;
     }
-    
-    .mitad1, .mitad2 {
-        flex: 0 0 100%;
+
+    .cajag {
+        max-width: 900px;
+        gap: 30px;
+    }
+
+    .mitad2 img {
+        max-width: 360px;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 960px) {
+    .cajag {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mitad1 {
+        padding: 1.75rem 1.25rem;
+    }
+
+    .filadoble {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 18px;
+    }
+
+    .cajag {
+        padding: 22px;
+        gap: 22px;
+    }
+
     .filadoble {
         flex-direction: column;
         gap: 12px;
     }
-    
-    .campo {
-        min-width: 100%;
-    }
-    
-    body {
-        padding: 15px;
-    }
-    
-    main {
-        width: 100%;
+
+    .campo input,
+    .campo select {
+        padding: 12px 14px;
     }
 }
 
-@media (max-width: 360px) {
-    .logo img {
-        width: 100px;
+@media (max-width: 480px) {
+    body {
+        padding: 14px;
+        font-size: 16px;
     }
-    
-    .mitad2 img {
-        max-width: 280px;
+
+    .cajag {
+        padding: 18px;
+        gap: 18px;
+        border-radius: 18px;
+    }
+
+    .logo img {
+        width: 120px;
+    }
+
+    .campo input,
+    .campo select {
+        padding: 11px 13px;
+        font-size: 14px;
+    }
+
+    .BotonRegistro {
+        font-size: 15px;
     }
 }
