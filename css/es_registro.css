@@ -6,27 +6,30 @@ body {
     margin: 0;
     font-family: Nunito, Arial, sans-serif;
     background: #FAF3FF;
+
     display: flex;
     justify-content: center;
-    padding: clamp(15px, 5vw, 23px);
+    padding: 23px;
+    color: #333;
+    line-height: 1.5;
 }
-
 main {
     width: 100%;
     display: flex;
     justify-content: center;
 }
-
 .cajag {
-    margin: clamp(15px, 3vw, 20px);
-    width: 96%;
+    margin: 30px 4%;
+    width: 100%;
     max-width: 1000px;
     background: #ffffff;
     border-radius: 25px;
     box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+
     display: flex;
-    gap: clamp(20px, 4vw, 35px);
+    gap: clamp(20px, 4vw, 38px);
     align-items: center;
+    padding: clamp(22px, 4vw, 38px);
 }
 
 
@@ -40,15 +43,16 @@ main {
     width: 100%;
     max-width: 420px;
     height: auto;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .mitad1 {
     flex: 1;
-    padding: clamp(1.5rem, 3vw, 3rem);
+    padding: clamp(28px, 5vw, 60px);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 18px;
 }
 
 .logo {
@@ -59,23 +63,22 @@ main {
 }
 
 .logo img {
-    width: clamp(120px, 15vw, 180px);
+    width: clamp(130px, 18vw, 180px);
 }
 
 .google {
     width: 100%;
-    padding: clamp(10px, 2vw, 12px);
+    padding: 12px;
     border-radius: 25px;
     border: 1px solid #d1d1d1;
     display: flex;
     align-items: center;
     cursor: pointer;
-    margin-bottom: 28px;
+    margin-bottom: 26px;
     background: white;
     font-weight: bold;
     justify-content: center;
-    font-size: clamp(14px, 1.5vw, 15px);
-    transition: 0.3s ease;
+    font-size: clamp(14px, 1.6vw, 16px);
 }
 
 .google:hover {
@@ -84,7 +87,7 @@ main {
 }
 
 .google img {
-    width: clamp(18px, 2.5vw, 22px);
+    width: 22px;
     margin-right: 10px;
 }
 
@@ -95,29 +98,36 @@ main {
 
 .inputs input {
     width: 100%;
-    padding: clamp(10px, 2vw, 13px) clamp(12px, 2vw, 17px);
+    padding: 13px 17px;
     border-radius: 25px;
     border: 1px solid #cfcfcf;
-    font-size: clamp(14px, 1.5vw, 15px);
-    transition: 0.3s ease;
+    font-size: clamp(14px, 1.6vw, 16px);
+    transition: 0.2s;
+}
+
+.inputs input:focus {
+    border-color: #ec680c;
+    box-shadow: 0 0 6px rgba(236,104,12,0.28);
+    outline: none;
 }
 
 .BotonRegistro {
     width: 100%;
-    padding: clamp(10px, 2vw, 13px);
+    padding: clamp(12px, 2.6vw, 14px);
     background: #ec680c;
     color: white;
-    font-size: clamp(14px, 1.5vw, 16px);
+    font-size: clamp(15px, 1.7vw, 17px);
     border-radius: 25px;
     border: none;
     cursor: pointer;
     margin-top: 12px;
-    transition: 0.3s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
 }
 
 .BotonRegistro:hover {
     background: #fa9421;
-    transform: scale(1.02);
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(236,104,12,0.22);
 }
 
 .BotonInicio {
@@ -132,47 +142,74 @@ main {
     font-weight: bold;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1080px) {
+    body {
+        padding: 22px;
+    }
+    .cajag {
+        max-width: 920px;
+    }
+    .logo img {
+        width: clamp(130px, 16vw, 160px);
+    }
+}
+
+@media (max-width: 940px) {
     body {
         padding: 20px;
     }
     .cajag {
         flex-direction: column;
-        padding: clamp(20px, 3vw, 35px);
-        gap: 25px;
+        gap: 22px;
+        text-align: center;
     }
-    .mitad1, .mitad2 {
-        flex: 0 0 100%;
+    .mitad1 {
+        padding: 1.75rem 1.25rem;
+        align-items: center;
+    }
+    .google {
+        margin-bottom: 20px;
+    }
+    .BotonInicio {
+        font-size: 13.5px;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
+    body {
+        padding: 16px;
+    }
     .cajag {
-        flex-direction: column;
         padding: 20px;
-        gap: 15px;
-        justify-content: center;
+        gap: 16px;
     }
     .mitad2 img {
-        width: 100%;
-        max-width: 300px;
+        max-width: 320px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 12px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .cajag {
+        padding: 18px;
+        gap: 12px;
+        border-radius: 18px;
+    }
+    .logo img {
+        width: 130px;
+    }
+    .google {
+        font-size: 14px;
+    }
+    .inputs input {
+        padding: 12px 14px;
     }
     .BotonRegistro {
-        width: 100%;
-    }
-    
-    body {
-        padding: 15px;
-    }
-}
-
-@media (max-width: 360px) {
-    .logo img {
-        width: 100px;
-    }
-    
-    .mitad2 img {
-        max-width: 250px;
+        font-size: 15px;
     }
 }
 
