@@ -170,7 +170,7 @@ body {
 
 /* QS */
 .cajaSomos {
-    background: #d8d2dd;
+    background: #f2bffb;
     margin: 50px 0 60px;
     padding: 5%;
     display: flex;
@@ -400,7 +400,7 @@ body {
  
 /* Cons */
 .consultas {
-    background-color: #d8d2dd;
+    background-color: #f2bffb;
     padding: 5%;
     margin: 40px auto 0px;
     display: grid;
