@@ -53,9 +53,21 @@ form.onsubmit = function(e) {
     }
 
     if (correcto) {
+        // Alerta simple con los datos de la cita
+        var parts = [];
+        if (form.nombre) parts.push('nombre: ' + form.nombre.value.trim());
+        if (form.apellido) parts.push('apellido: ' + form.apellido.value.trim());
+        if (form.mascota) parts.push('mascota: ' + form.mascota.value.trim());
+        if (form.celular) parts.push('celular: ' + form.celular.value.trim());
+        if (form.correo) parts.push('correo: ' + form.correo.value.trim());
+        if (form.servicio) parts.push('servicio: ' + form.servicio.value);
+        if (form.fecha) parts.push('fecha: ' + form.fecha.value);
+        if (form.hora) parts.push('hora: ' + form.hora.value);
+        alert('Datos de la cita:\n\n' + parts.join('\n'));
+
         mensajeExito.textContent = '¡Cita agendada correctamente!';
         mensajeExito.classList.add('mostrar');
-        
+
         mensajeExito.onclick = function() {
             window.location.href = "index.html";
         };
@@ -63,3 +75,4 @@ form.onsubmit = function(e) {
         form.reset();
     }
 };
+

@@ -751,7 +751,6 @@ textarea {
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 100px;
 }
 
 /* Media queries para dispositivos pequeños */

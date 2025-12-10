@@ -28,6 +28,9 @@ form.onsubmit = function(e) {
     }
 
     if (correcto) {
+        // Alerta simple: mostrar solo el correo
+        alert('Datos del formulario:\n\n' + 'correo: ' + correo);
+
         mensajeE.textContent = '¡Inicio de sesión exitoso!';
         mensajeE.classList.add('mostrar');
     }

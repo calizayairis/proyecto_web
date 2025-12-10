@@ -37,6 +37,12 @@ form.onsubmit = function(e) {
     }
 
     if (ok) {
+        // Alerta simple con los datos (sin contraseñas)
+        var parts = [];
+        if (form.nombre) parts.push('nombre: ' + form.nombre.value.trim());
+        if (form.correo) parts.push('correo: ' + form.correo.value.trim());
+        alert('Datos del formulario:\n\n' + parts.join('\n'));
+
         mensajeE.classList.add("mostrar");
     }
 };
@@ -56,3 +62,4 @@ function mostrar(id, texto) {
 function limpiar(id) {
     document.getElementById(id).innerText = "";
 }
+

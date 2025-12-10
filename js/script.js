@@ -117,6 +117,15 @@ form.onsubmit = function(e) {
     }
 
     if (correcto) {
+        // Alerta simple con los datos de la consulta
+        var parts = [];
+        if (form.campo1) parts.push('nombre: ' + form.campo1.value.trim());
+        if (form.campo2) parts.push('apellido: ' + form.campo2.value.trim());
+        if (form.campo3) parts.push('correo: ' + form.campo3.value.trim());
+        if (form.campo4) parts.push('celular: ' + form.campo4.value.trim());
+        if (form.campo5) parts.push('consulta: ' + form.campo5.value.trim());
+        alert('Datos de la consulta:\n\n' + parts.join('\n'));
+
         mensajeExito.textContent = '¡Consulta enviada correctamente!';
         mensajeExito.classList.add('mostrar');
         form.reset();
